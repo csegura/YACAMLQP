@@ -1,0 +1,124 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IdeSeg.SharePoint.Caml.QueryParser</RootNamespace>
+    <AssemblyName>IdeSeg.SharePoint.Caml.QueryParser</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key2.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AST\ASTNodeFactory.cs" />
+    <Compile Include="AST\ASTNodeFactoryBase.cs" />
+    <Compile Include="AST\Base\BooleanAnd.cs" />
+    <Compile Include="AST\Base\Expression.cs" />
+    <Compile Include="AST\Base\BooleanOr.cs" />
+    <Compile Include="AST\ASTNode.cs" />
+    <Compile Include="AST\Base\FieldList.cs" />
+    <Compile Include="AST\Base\ValueNodeType.cs" />
+    <Compile Include="AST\CAML\CAMLFieldNode.cs" />
+    <Compile Include="AST\CAML\CAMLGroupBy.cs" />
+    <Compile Include="AST\CAML\CAMLOpGreaterEqual.cs" />
+    <Compile Include="AST\CAML\CAMLOpIsNotNull.cs" />
+    <Compile Include="AST\CAML\CAMLOpIsNull.cs" />
+    <Compile Include="AST\CAML\CAMLOpLess.cs" />
+    <Compile Include="AST\CAML\CAMLOpLessEqual.cs" />
+    <Compile Include="AST\CAML\CAMLOpNotEqual.cs" />
+    <Compile Include="AST\CAML\CAMLOpGreater.cs" />
+    <Compile Include="AST\Base\Query.cs" />
+    <Compile Include="AST\Base\OpBeginsWith.cs" />
+    <Compile Include="AST\Base\OpContains.cs" />
+    <Compile Include="AST\Base\OpEqual.cs" />
+    <Compile Include="AST\Base\Operation.cs" />
+    <Compile Include="AST\Base\OpGreater.cs" />
+    <Compile Include="AST\Base\OpGreaterEqual.cs" />
+    <Compile Include="AST\Base\OpIsNotNull.cs" />
+    <Compile Include="AST\Base\OpIsNull.cs" />
+    <Compile Include="AST\Base\OpLess.cs" />
+    <Compile Include="AST\Base\OpLessEqual.cs" />
+    <Compile Include="AST\Base\OpNotEqual.cs" />
+    <Compile Include="AST\CAML\CAMLBooleanAnd.cs" />
+    <Compile Include="AST\CAML\CAMLBooleanOr.cs" />
+    <Compile Include="AST\CAML\CAMLOpBeginsWith.cs" />
+    <Compile Include="AST\CAML\CAMLOpContains.cs" />
+    <Compile Include="AST\CAML\CAMLOpEqual.cs" />
+    <Compile Include="AST\CAML\CAMLOrderBy.cs" />
+    <Compile Include="AST\CAML\CAMLQueryExpression.cs" />
+    <Compile Include="AST\CAML\CAMLValueNode.cs" />
+    <Compile Include="AST\CAML\CAMLWhere.cs" />
+    <Compile Include="AST\CodeGenerator.cs" />
+    <Compile Include="AST\ExpressionNodeIterator.cs" />
+    <Compile Include="AST\ASTNodeCAMLFactory.cs" />
+    <Compile Include="AST\Base\FieldNode.cs" />
+    <Compile Include="AST\Base\FalseNode.cs" />
+    <Compile Include="AST\Base\GroupBy.cs" />
+    <Compile Include="AST\Base\OrderBy.cs" />
+    <Compile Include="LexScanner\ScannerBase.cs" />
+    <Compile Include="LexScanner\ScannerState.cs" />
+    <Compile Include="LexScanner\Token.cs" />
+    <Compile Include="LexScanner\TokenValueType.cs" />
+    <Compile Include="AST\Base\Sequence.cs" />
+    <Compile Include="AST\Base\FieldOperation.cs" />
+    <Compile Include="AST\Base\TerminalNode.cs" />
+    <Compile Include="AST\Base\TrueNode.cs" />
+    <Compile Include="AST\Base\ValueNode.cs" />
+    <Compile Include="AST\Base\Where.cs" />
+    <None Include="Parser\Copy of NParser.cs" />
+    <Compile Include="Parser\NParser.cs" />
+    <Compile Include="LexScanner\ScannerException.cs" />
+    <Compile Include="LexScanner\Scanner.cs" />
+    <Compile Include="Parser\ParserExceptionType.cs" />
+    <Compile Include="Parser\ParserException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LexScanner\TokenType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Key2.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

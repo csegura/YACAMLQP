@@ -1,0 +1,69 @@
+﻿
+* LexScanner
+	- ScannerBase is an abstract class with the basic scanner functions
+
+		- ScannerBase use internally ScannerState a small class to save the scanner state and
+		return back after read a token if necesary.
+		
+		- ScannerBase implements 
+			ITokenizer - Capacity to get a Token and return the TokenType and the LastTokenType
+			ITokenValue - Capacity to get the TokenType and the Token Value
+
+   - Scanner class that implements ScannerBase
+	
+		Override 
+			GetToken 
+			CheckCorrectBracketsAndQuotes
+			
+		Implements the necesary methods to scan the different tokens
+			ReservedWords (use a Dictionary word-TokenType)
+			Numbers
+			Strings
+			Operators (use a Dictionary operator-TokenType)
+			Dates 
+			
+	- Token
+		- A small class to store tokens. If token has a value store the value 
+		(as string) and the type (TokenType)
+			
+	- TokenType
+		- Each token that the scanner can return
+	
+
+ * ASTNode
+	- Is an astract class with the basic node methods and references, user to build the abstract 
+	syntax tree.
+	
+   In the folder "Base" there are a class for each type of node used in the AST Trees, in principle
+   I thought they were all abstract, but as you can see in order to implemnt other syntax is 
+   better that you have all necesary classes already created and subclass the desired one. 
+   (ala Template Pattern)
+ 
+   In the folder "CAML" there are subclases of previous base calasses that implement the methods
+   necesary to create the CAML queries. As you can see only is necesary subclass determined subclases.      
+   
+ * ASTNodeFactoryBase
+ 
+	- Is an abstract class responsible of create each one of ASTNodes, forming AST Trees
+	- Is designed to be subclased and add the desired ASTNodes depended oof syntax to use
+	
+ * ASTNodeFactory
+    - A simple subclass from ASTNodeFactory 
+      	
+	
+ * NParser
+	- Is the new Parser
+	- Is a recursive sintax directed parser, responsible of create teh AST Tree, 
+	now (I think) it is more clean and easy to follow, understand, and extend.
+	- Parser is based in the Interpreter Pattern 
+	
+ * CodeGenerator 
+	- A class to generate code, this class iterate over theh ast tree and generate 
+	the code
+ 
+	
+ * Tests
+	- Some parts are designed using TDD and other no; 
+	- I thought that the AST nodes and trees are more complex to use TDD, and I added the tests after. 
+	- Also there is a class called ExpressionNodeIterator that I'm using to iterate on ASTTrees and 
+	  ensure that the trees contains the correct nodes. 

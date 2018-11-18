@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FAF5A175-50A7-4DF9-8336-C0A86BCEBF79}"
+	ProjectSection(SolutionItems) = preProject
+		IdeSeg.SharePoint.Caml.QueryParser\IdeSeg.SharePoint.Caml.QueryParser.eap = IdeSeg.SharePoint.Caml.QueryParser\IdeSeg.SharePoint.Caml.QueryParser.eap
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeSeg.SharePoint.Caml.QueryParser", "IdeSeg.SharePoint.Caml.QueryParser\IdeSeg.SharePoint.Caml.QueryParser.csproj", "{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACAMLQT", "YACAMLQT\YACAMLQT\YACAMLQT.csproj", "{1EEE0704-85DF-4BE6-B2FF-8038C3880669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YACAMLQP_Tests", "YACAMLQP_Tests\YACAMLQP_Tests.csproj", "{1AC34EA4-7C27-4FDC-A9C1-FE67D634CA36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB01909-69E3-4CCF-AE67-A19AC1DC0576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEE0704-85DF-4BE6-B2FF-8038C3880669}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEE0704-85DF-4BE6-B2FF-8038C3880669}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEE0704-85DF-4BE6-B2FF-8038C3880669}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEE0704-85DF-4BE6-B2FF-8038C3880669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC34EA4-7C27-4FDC-A9C1-FE67D634CA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC34EA4-7C27-4FDC-A9C1-FE67D634CA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC34EA4-7C27-4FDC-A9C1-FE67D634CA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC34EA4-7C27-4FDC-A9C1-FE67D634CA36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

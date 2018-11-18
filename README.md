@@ -118,7 +118,7 @@ En esta última parte solo unas pequeñas notas para el usuario final.
 
 Bien, para usar YACAMLQT, dentro de tus proyectos, solo hay que referenciar la dll (IdeSeg.SharePoint.Caml.QueryParser.dll)  y el uso sería el siguiente:
 
-´´´cs
+```
    1:              try
    2:              {
    3:                  var parser = new NParser(textTSql, new ASTNodeCAMLFactory());
